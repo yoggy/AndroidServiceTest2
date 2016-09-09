@@ -61,7 +61,7 @@ public class TestService extends Service {
         Log.i(TAG, "onStartCommand() : flags=" + flags + ", startId=" + startId + ", intent=" + intent);
         Toast.makeText(getApplicationContext(), "TestService.onStart()", Toast.LENGTH_LONG).show();
 
-        if (intent != null && intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
+        if (intent != null && Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
             // OSの起動が完了したとき
             Toast.makeText(getApplicationContext(), "TestService.onStart() : ACTION_BOOT_COMPLETED", Toast.LENGTH_LONG).show();
         }
